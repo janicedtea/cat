@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3oca3xhkd03e"]
+
+[ext_resource type="Script" uid="uid://cg7261s8yimx3" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://hmbbsjbu5spe" path="res://images/background.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://drl8ocmes6qp3" path="res://hud.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c881exotaieyw" path="res://player_segment.tscn" id="4_1bvp3"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_0xm2m")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(320, 360)
+texture = ExtResource("2_0xm2m")
+
+[node name="hud" parent="." instance=ExtResource("3_h2yge")]
+
+[node name="PlayerSegment" parent="." instance=ExtResource("4_1bvp3")]

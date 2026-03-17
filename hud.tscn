@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://drl8ocmes6qp3"]
+
+[ext_resource type="FontFile" uid="uid://bs44dks87rbmr" path="res://Coiny/Coiny-Regular.ttf" id="1_37p78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(0.38295063, 0.6170343, 0.86563444, 1)
+
+[node name="hud" type="CanvasLayer"]
+
+[node name="scorepanel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_64ctp")
+
+[node name="scorelabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -105.0
+offset_right = 105.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
