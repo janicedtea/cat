@@ -27,11 +27,12 @@ func start_game():
 	
 	var start_pos = Vector2(2.5,2)
 	
-	for i in range(1):
+	for i in range(3):
 		var segment = segment_scene.instantiate()
 		add_child(segment)
 		
 		segment.position = (start_pos - Vector2(i,0)) * cell_size
+		segment.target_position = segment.position
 		segment.set_direction(direction)
 		
 		cat.append(segment)
@@ -40,13 +41,12 @@ func move_cat():
 	
 	#move it
 	for i in range(cat.size() - 1, 0, -1):
-		cat[i].position = cat[i - 1].position
 		
-		var dir = (cat[i - 1].position - cat[i].position).sign()
-		cat[i].set_direction(dir)
+		cat[i].target_position = cat[i - 1].position
+		cat[i].set_direction(cat[i-1].direction)
 		
 	#move first kitty
-	cat[0].position = new_head_pos
+	cat[0].target_position = new_head_pos
 	cat[0].set_direction(direction)
 
 func _input(event):

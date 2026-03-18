@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://i2wmhfgpcgmg"]
+
+[ext_resource type="Texture2D" uid="uid://cxt318xqgc8sd" path="res://images/feesh.png" id="1_s72td"]
+
+[node name="feesh" type="Sprite2D"]
+texture = ExtResource("1_s72td")
